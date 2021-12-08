@@ -1,0 +1,42 @@
+open System
+
+let FigureStuff x=
+    let subing y =
+        x * y
+    subing
+
+
+let Addwords ape =
+    let MoreWords bpe =
+        let EvenWords cpe =
+            sprintf "Well, %s" ape + " has eaten " + bpe + "'s baby" + cpe
+        EvenWords
+    MoreWords
+
+
+[<EntryPoint>]
+let main argv =
+
+    printfn "first Example"
+    printfn ""
+    let firstisx = FigureStuff 5
+    printfn "Only X = %A" firstisx
+    printfn ""
+    let Secoundisy = firstisx 6
+    printfn "Both X * Y = %A" Secoundisy
+    printfn ""
+    printfn ""
+
+    printfn "Second Example"
+    printfn ""
+    let Sentncemaker = Addwords "Caboose"
+    printfn "1: %A" Sentncemaker
+    printfn ""
+    let SentChaser = Sentncemaker "Tucker"
+    printfn "2: %A" SentChaser
+    printfn ""
+    let SentFinaly = SentChaser "Blarggity Blarg-Tucker"
+    printfn ""
+    printfn "3: %A" SentFinaly
+
+    0 // return an integer exit code
